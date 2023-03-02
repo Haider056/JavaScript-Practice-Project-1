@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+h1{
+    font-size: 40px;
+    margin-top: 100px;
+    text-align: center;
+    color: black;
+}
+#h12{
+    font-size: 40px;
+    text-align: center;
+    color: black;   
+}
+#para{
+    font-size: 22px;
+}
+#container{
+border: 4px;
+    padding: 30px;
+    border-color: burlywood;
+    background-color: cadetblue;
+    width: 500px;
+    text-align: center;
+    margin-left: 400px;
+}
+#container2{
+    position:relative;
+    top:-40px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color:darkgrey;
+    width: 520px;
+    height: 50px;
+    text-align: center;
+    margin-left: 400px;
+}
+</style>
+<body>
+    <h1>MILES TO KILOMTER CONVERTER</h1>
+    <div id="container">
+        <p id="para">Type in Miles to and press button to convert it into KM</p>
+    <form action="" method="post" id="convert">
+        
+        <input type="text" name="distance" id="distance" placeholder="Distance in KM">
+        <input type="submit" name="convertdist" value="convert Distance">
+    </form>
+    </div>
+    <div id="container2">
+     <p id="h12">Answer Goes here</p>
+    </div>
+    <script>
+        console.log("Fine")
+        document.getElementById('convert').addEventListener('submit',function(event)
+{
+
+    event.preventDefault();
+   var distance=parseFloat(document.getElementById('distance').value);
+    var result=distance*1.6;
+    document.getElementById('h12').innerHTML=result;
+});
+        </script>
+</body>
+</html>
